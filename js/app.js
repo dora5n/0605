@@ -18,11 +18,15 @@
 // }else{console.log("どれにも当てはまらない");
 // }
 
-
+$(function() {
+// $('h2').css('color', 'red');
+$("h2").hide('slow');
+$("h2").show('slow');
+});
 
 $("button").on("click", function () {
 
-$('.a').html('押された');
+$(".a").html("押された");
 
 const random = Math.floor(Math.random() * 5);
 console.log(random, "ランダム");
@@ -51,8 +55,7 @@ if (random === 0) {
 } else if (random === 4) {
   console.log("大凶です");
   // $(".a").html("大凶です");
-  // $(".a").css("color", "black",);
-  // $(".a").css("font-size", "50px");
+  // $(".a").css("color", "black",).css("font-size", "50px");
   $(".a").hide('slow');
   $(".a").show('slow');
   $(".a").html("<img src='../img/6.jpg' >");
