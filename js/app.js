@@ -18,13 +18,38 @@
 // }else{console.log("どれにも当てはまらない");
 // }
 
+
+// $(function() {
+// // $('h2').css('color', 'red');
+// $("h2").hide("slow");
+// $("h2").show("slow");
+// });
+
+
 $(function() {
-// $('h2').css('color', 'red');
-$("h2").hide('slow');
-$("h2").show('slow');
+  $("h2").toggle();
+  $("#btn").click(function() {
+    $("h2").toggle(1000);
+  });
+})
+
+// $(function() {
+//   $("#btn").mouseover(function() {
+//     $("#btn").text("push");
+//   }).mouseout(function() {
+//     $("#btn").text("あなたの運命は...");
+//   });
+//   });
+
+$("#btn").hover(function() {
+  $("#btn").text("push");
+},function() {
+  $("#btn").text("あなたの運命は...");
 });
 
-$("button").on("click", function () {
+
+
+$("#btn").on("click", function () {
 
 $(".a").html("押された");
 
@@ -56,8 +81,11 @@ if (random === 0) {
   console.log("大凶です");
   // $(".a").html("大凶です");
   // $(".a").css("color", "black",).css("font-size", "50px");
-  $(".a").hide('slow');
-  $(".a").show('slow');
+  $(".a").hide("slow");
+  $(".a").show("slow");
+  // $(".a").hide("slideDown");
+  // $(".a").show("slideUp");
+
   $(".a").html("<img src='../img/6.jpg' >");
 }
 
