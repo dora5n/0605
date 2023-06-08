@@ -44,7 +44,7 @@ $(function() {
 $("#btn").hover(function() {
   $("#btn").text("push");
 },function() {
-  $("#btn").text("あなたの運命は...");
+  $("#btn").text("どーん！！！");
 });
 
 
@@ -52,6 +52,12 @@ $("#btn").hover(function() {
 $("#btn").on("click", function () {
 
 $(".a").html("押された");
+
+$(".test").animate({
+  width: "300px"
+}, 1000);
+
+$("h1").before("<p>おみくじ</p>")
 
 const random = Math.floor(Math.random() * 5);
 console.log(random, "ランダム");

@@ -17,6 +17,24 @@ h2 {
   text-align: center;
 }
 
+.test {
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 15px;
+  height: 50px;
+  background-color: blue;
+  text-align-last: justify;
+}
+
+/* h3 {
+  padding: 50px;
+  font-weight: bold;
+  color: blue;
+  font-size: 30px;
+  text-align: center;
+} */
+
 #btn {
   border-radius: 6px;
   margin-top: 20px;
