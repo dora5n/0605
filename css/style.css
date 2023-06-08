@@ -18,13 +18,13 @@ h2 {
 }
 
 .test {
-  width: 200px;
+  width: 80px;
   margin: 0 auto;
   margin-top: 20px;
   padding: 15px;
-  height: 50px;
+  height: 230px;
   background-color: blue;
-  text-align-last: justify;
+  text-align-last: center;
 }
 
 /* h3 {
@@ -64,4 +64,10 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#backToTop {
+  margin: 20px auto;
+  padding: 20px;
+  margin-bottom: 20px;
 }

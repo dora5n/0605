@@ -47,6 +47,13 @@ $("#btn").hover(function() {
   $("#btn").text("どーん！！！");
 });
 
+$(function() {
+  $("#backToTop").click(function() {
+    $("body,html").animate({
+      scrollTop: 0
+    },1000);
+  });
+});
 
 
 $("#btn").on("click", function () {
@@ -56,6 +63,8 @@ $(".a").html("押された");
 $(".test").animate({
   width: "300px"
 }, 1000);
+
+
 
 $("h1").before("<p>おみくじ</p>")
 
