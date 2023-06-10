@@ -19,6 +19,17 @@
 // }
 
 
+$(".line").animate({
+  "width": "100%"
+},1500,function(){
+  $(".line").css("right", 0);
+  $(".line").animate({"width": "0%"},function(){
+    $(".up").animate({"height": "0%"});
+    $(".down").animate({"height": "0%"});
+  });
+});
+
+
 // $(function() {
 // // $('h2').css('color', 'red');
 // $("h2").hide("slow");
@@ -26,12 +37,12 @@
 // });
 
 
-$(function() {
-  $("h2").toggle();
-  $("#btn").click(function() {
-    $("h2").toggle(1000);
-  });
-})
+// $(function() {
+//   $("h2").toggle();
+//   $("#btn").click(function() {
+//     $("h2").toggle(1000);
+//   });
+// })
 
 // $(function() {
 //   $("#btn").mouseover(function() {
@@ -47,26 +58,26 @@ $("#btn").hover(function() {
   $("#btn").text("どーん！！！");
 });
 
-$(function() {
-  $("#backToTop").click(function() {
-    $("body,html").animate({
-      scrollTop: 0
-    },1000);
-  });
-});
-
 
 $("#btn").on("click", function () {
 
 $(".a").html("押された");
 
-$(".test").animate({
-  width: "300px"
+
+$(".tes").animate({
+  width: "500px"
 }, 1000);
 
 
+$("#backToTop").click(function() {
+  $("body,html").animate({
+    scrollTop: 0
+  },2000);
+});
 
-$("h1").before("<p>おみくじ</p>")
+
+// $("h1").before("<p>おみくじ</p>")
+
 
 const random = Math.floor(Math.random() * 5);
 console.log(random, "ランダム");
@@ -76,6 +87,8 @@ if (random === 0) {
   // $(".a").html("大吉です");
   // $(".a").css("color", "red");
   $(".a").html("<img src='../img/1.jpg' >");
+  $(".a").hide("slow");
+  $(".a").show("slow");
   // $(".a").html("<img src='img/1.jpg' >")
 } else if (random === 1) {
   console.log("中吉です");
@@ -96,13 +109,32 @@ if (random === 0) {
   console.log("大凶です");
   // $(".a").html("大凶です");
   // $(".a").css("color", "black",).css("font-size", "50px");
+  $(".a").html("<img src='../img/6.jpg' >");
   $(".a").hide("slow");
   $(".a").show("slow");
   // $(".a").hide("slideDown");
   // $(".a").show("slideUp");
-
-  $(".a").html("<img src='../img/6.jpg' >");
 }
-
-
 });
+
+
+let num = 1;
+
+$(".test").on("click", function () {
+  $(this).append(`${num}: <p>押したぞ！！！</p>`);
+  $(this).addClass("morita");
+  $(this).removeClass("morita");
+  $(".test").toggleClass("morita");
+  $(".bb").html(`<p>${num}: 押したぞ！！！</p>`);
+
+  num += 1;
+
+    $(".bb").fadeOut(2000); //2000 は2秒
+  $(".bb").fadeIn(2000); //2000 は2秒
+  if (num === 9) {
+    alert("おめでとう！！たくさん遊んでくれて！！！");
+  }
+  
+});
+
+
